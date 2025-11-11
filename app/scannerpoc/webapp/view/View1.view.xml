@@ -1,0 +1,59 @@
+<mvc:View
+    controllerName="scannerpoc.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns:m="sap.m"
+    xmlns:ndc="sap.ndc">
+
+    <m:Page id="page" title="Scanner &amp; Books">
+        <m:content>
+
+            <!-- 🔹 Barcode Scanner Section -->
+            <m:VBox id="vboxScanner" class="sapUiSmallMargin sapUiLargeMarginBottom">
+                <ndc:BarcodeScannerButton
+                    id="sampleBarcodeScannerButton"
+                    scanSuccess="onScanSuccess"
+                    scanFail="onScanError"
+                    inputLiveUpdate="onScanLiveupdate"
+                    dialogTitle="Barcode Scanner"
+                />
+                <m:HBox id="hboxResult" class="sapUiTinyMarginTop">
+                    <m:Label id="_IDGenLabel" text="Scan Result:"/>
+                    <m:Text id="sampleBarcodeScannerResult" text="" class="sapUiTinyMarginBegin"/>
+                </m:HBox>
+            </m:VBox>
+
+            <!-- 🔹 Books Table Section -->
+            <m:Table
+                id="booksTable"
+                inset="false"
+                items="{/value}">
+                <m:headerToolbar>
+                    <m:Toolbar id="_IDGenToolbar">
+                        <m:Title id="_IDGenTitle" text="Books Catalog" level="H2" />
+                        <m:ToolbarSpacer id="_IDGenToolbarSpacer" />
+                    </m:Toolbar>
+                </m:headerToolbar>
+
+                <m:columns>
+                    <m:Column id="_IDGenColumn"><m:Text id="_IDGenText1" text="ID" /></m:Column>
+                    <m:Column id="_IDGenColumn1"><m:Text id="_IDGenText2" text="Title" /></m:Column>
+                    <m:Column id="_IDGenColumn2"><m:Text id="_IDGenText3" text="Author ID" /></m:Column>
+                    <m:Column id="_IDGenColumn3"><m:Text id="_IDGenText4" text="Stock" /></m:Column>
+                </m:columns>
+
+                <m:items>
+                    <m:ColumnListItem id="_IDGenColumnListItem">
+                        <m:cells>
+                            <m:Text id="_IDGenText5" text="{ID}" />
+                            <m:Text id="_IDGenText6" text="{title}" />
+                            <m:Text id="_IDGenText7" text="{author_ID}" />
+                            <m:Text id="_IDGenText8" text="{stock}" />
+                        </m:cells>
+                    </m:ColumnListItem>
+                </m:items>
+            </m:Table>
+
+        </m:content>
+    </m:Page>
+</mvc:View>

@@ -1,0 +1,6 @@
+COLUMN TABLE sap_common_Countries (
+  name NVARCHAR(255),
+  descr NVARCHAR(1000),
+  code NVARCHAR(3) NOT NULL,
+  PRIMARY KEY(code)
+)

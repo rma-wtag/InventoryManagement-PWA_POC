@@ -1,0 +1,5 @@
+VIEW CatalogService_Books_texts AS SELECT
+  texts_0.locale,
+  texts_0.ID,
+  texts_0.title
+FROM my_bookshop_Books_texts AS texts_0

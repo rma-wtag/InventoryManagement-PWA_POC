@@ -1,0 +1,4 @@
+VIEW CatalogService_Authors AS SELECT
+  Authors_0.ID,
+  Authors_0.name
+FROM my_bookshop_Authors AS Authors_0

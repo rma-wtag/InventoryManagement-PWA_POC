@@ -1,0 +1,10 @@
+VIEW CatalogService_Orders AS SELECT
+  Orders_0.createdAt,
+  Orders_0.createdBy,
+  Orders_0.modifiedAt,
+  Orders_0.modifiedBy,
+  Orders_0.ID,
+  Orders_0.book_ID,
+  Orders_0.country_code,
+  Orders_0.amount
+FROM my_bookshop_Orders AS Orders_0

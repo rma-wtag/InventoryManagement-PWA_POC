@@ -1,0 +1,7 @@
+COLUMN TABLE my_bookshop_Books (
+  ID INTEGER NOT NULL,
+  title NVARCHAR(5000),
+  author_ID INTEGER,
+  stock INTEGER,
+  PRIMARY KEY(ID)
+)

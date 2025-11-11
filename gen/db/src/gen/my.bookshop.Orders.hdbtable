@@ -1,0 +1,11 @@
+COLUMN TABLE my_bookshop_Orders (
+  createdAt TIMESTAMP,
+  createdBy NVARCHAR(255),
+  modifiedAt TIMESTAMP,
+  modifiedBy NVARCHAR(255),
+  ID NVARCHAR(36) NOT NULL,
+  book_ID INTEGER,
+  country_code NVARCHAR(3),
+  amount INTEGER,
+  PRIMARY KEY(ID)
+)

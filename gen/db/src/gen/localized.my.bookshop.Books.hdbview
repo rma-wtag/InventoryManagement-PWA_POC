@@ -1,0 +1,6 @@
+VIEW localized_my_bookshop_Books AS SELECT
+  L_0.ID,
+  coalesce(localized_1.title, L_0.title) AS title,
+  L_0.author_ID,
+  L_0.stock
+FROM (my_bookshop_Books AS L_0 LEFT JOIN my_bookshop_Books_texts AS localized_1 ON localized_1.ID = L_0.ID AND localized_1.locale = SESSION_CONTEXT('LOCALE'))

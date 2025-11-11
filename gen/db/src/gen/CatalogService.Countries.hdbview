@@ -1,0 +1,5 @@
+VIEW CatalogService_Countries AS SELECT
+  Countries_0.name,
+  Countries_0.descr,
+  Countries_0.code
+FROM sap_common_Countries AS Countries_0
